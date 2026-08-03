@@ -1,3 +1,0 @@
-python-telegram-bot[webhooks]
-PyPDF2
-docx2txt
