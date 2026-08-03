@@ -1,0 +1,3 @@
+python-telegram-bot
+PyPDF2
+docx2txt
