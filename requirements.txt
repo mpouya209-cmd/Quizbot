@@ -1,9 +1,0 @@
-python-telegram-bot[webhooks]
-PyPDF2
-pymupdf
-pdf2image
-pytesseract
-docx2txt
-Pillow
-openai
- 
