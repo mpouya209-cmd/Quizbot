@@ -6,4 +6,3 @@ pytesseract
 docx2txt
 Pillow
 openai
-pytz
