@@ -1,8 +1,0 @@
-python-telegram-bot>=21.0.0
-PyPDF2
-pymupdf
-pdf2image
-pytesseract
-docx2txt
-Pillow
-openai
