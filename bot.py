@@ -244,7 +244,7 @@ async def inline_query_handler(update: Update, context: ContextTypes.DEFAULT_TYP
 async def begin_group_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
-    chat_id = update.effective_chat.id
+    chat_id = update.effective_chat.id if update.effective_chat else query.message.chat.id
     db.cursor.execute("DELETE FROM group_sessions WHERE chat_id=?", (chat_id,))
     db.conn.commit()
     session = db.get_group_session(chat_id)
