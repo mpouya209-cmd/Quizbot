@@ -246,7 +246,9 @@ async def begin_group_callback(update: Update, context: ContextTypes.DEFAULT_TYP
     await query.answer()
     
     # این خط ۱۰۰٪ امن است و خطا نمی‌دهد
-    chat_id = update.effective_chat.id if update.effective_chat else query.message.chat.id
+chat_id = update.effective_chat.id
+if not chat_id:
+    chat_id = query.message.chat.id
 
     db.cursor.execute("DELETE FROM group_sessions WHERE chat_id=?", (chat_id,))
     db.conn.commit()
